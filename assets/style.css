@@ -1,0 +1,15 @@
+
+#searchcard{
+    padding: 15px;
+    margin: 15px;
+    background-color: aqua;
+}
+
+#todayweather{
+    padding: 15px;
+    margin: 15px; 
+}
+
+.promts{
+    opacity: 0.5;
+}

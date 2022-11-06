@@ -20,7 +20,8 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./develop/style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+
     <title>Weather Dashboard</title>
   </head>
   <body>
@@ -32,6 +33,31 @@
         </h2>
       </nav>
     </header>
+    <div class="container">
+      <!-- row for both cards -->
+      <!--search card-->
+      <div class="row">
+        <div id="searchcard" class="card">
+          <form id="cityinput">
+            <input
+              type="text"
+              id="chosencity"
+              placeholder="Enter City"
+              name="City"
+            />
+            <button type="button" class="btn btn-info">Search Weather</button>
+            <button type="button" class="btn btn-danger">Clear History</button>
+          </form>
+        </div>
+
+        <!--today's weather card-->
+        <div id="todayweather" class="card col-md-6">
+          <h2 id="cityname">Today's Weather:</h2>
+          <span class="promts">Search to see the weather</span>
+        </div>
+      </div>
+    </div>
+
     <!-- will be using Luxon instead of Moment-->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/3.1.0/luxon.min.js"></script>
