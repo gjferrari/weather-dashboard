@@ -1,11 +1,13 @@
 //switching to jQuery
 const APIKey = "a2177dabb6b2705fae8ab52208e93f5c";
+const currentCity = "";
+const lastSearched = "";
 
 const searchHistory = [];
 
 const today = moment().format();
 
-const todayWeather = (city) => {
+const getTodaysWeather = (city) => {
   const todayWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
   $.ajax({
     url: todayWeatherURL,
@@ -17,6 +19,14 @@ const todayWeather = (city) => {
     var weatherIconURL = `https://openweathermap.org/img/w/${iconCode}.png`;
   });
 };
+
+//event listeners
+$("#search-button").on("click", (event) => {
+  event.preventDefault();
+  currentCity = $("#chosenCity").val();
+  getTodaysWeather(event);
+});
+
 
 // var searchWeather = document.getElementById("searchWeather");
 // var clearHistory = document.getElementById("clearHistory");
