@@ -13,14 +13,13 @@ var oldcities = [];
 //API
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={APIKey}
 
-let temp = 0;
-let city = "";
-let humidity = "";
-let wind = "";
-let x = 0;
+const temp = 0;
+const city = "";
+const humidity = "";
+const wind = "";
 
 searchWeather.addEventListener("click", function (event) {
-  x = 0;
+  console.log("search button clicked");
   event.preventDefault();
   handleUserInput();
 });
