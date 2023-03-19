@@ -1,7 +1,7 @@
 //switching to jQuery
 const searchHistory = [];
 var searchWeather = document.getElementById("searchWeather");
-var clearHistory = document.getElementById("clearHistory");
+var showHistory = document.getElementById("showHistory");
 var city;
 var nextFiveDays = document.getElementById("nextFiveDays");
 var todayWeather = document.getElementById("todayWeather");
@@ -13,45 +13,32 @@ const lastSearched = "";
 
 const today = moment().format();
 
-// const getTodaysWeather = (city) => {
-//   const todayWeatherURL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
-//   $.ajax({
-//     url: todayWeatherURL,
-//     method: "GET",
-//   }).then((todayResponse) => {
-//     $("#infoCard").css("display", "block");
-//     $("cityName").empty();
-//     var iconCode = currentResponse.weather[0].icon;
-//     var weatherIconURL = `https://openweathermap.org/img/w/${iconCode}.png`;
-//   });
-
-//   const currentCity = $(`<h2 id="currentcity">`);
-// };
-
-// //event listeners
-// $("#searchWeather").on("click", (event) => {
-//   event.preventDefault();
-//   currentCity = $("#chosenCity").val();
-//   getTodaysWeather(event);
-// });
-
-// //array for previously stored cities
-var oldcities = [];
-
 //API
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={APIKey}
 
-const temp = 0;
-const city = "";
-const humidity = "";
-const wind = "";
+let temp = 0;
+let city = "";
+let humidity = "";
+let wind = "";
+let x = 0;
 
 searchWeather.addEventListener("click", function (event) {
   console.log("search button clicked");
+  x = 0;
   event.preventDefault();
   handleUserInput();
 });
 
 const start = () => {
   const savedSearch = JSON.parse(localStorage.getItem("search-history"));
+  if (savedSearch != null) {
+    var searchArray = savedSearch;
+    showSearchHistory(searchArray);
+  }
+};
+
+const showSearchHistory = (searchArray) => {
+  for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+  }
 };
