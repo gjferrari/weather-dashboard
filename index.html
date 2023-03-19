@@ -37,21 +37,25 @@
       <!-- row for both cards -->
       <!--search card-->
       <div class="row">
-        <div id="searchcard" class="card">
-          <form id="cityinput">
+        <div id="search-card" class="card">
+          <form id="search-form">
             <input
               type="text"
               id="chosencity"
               placeholder="Enter City"
               name="City"
             />
-            <button type="button" class="btn btn-info">Search Weather</button>
-            <button type="button" class="btn btn-danger">Clear History</button>
+            <button type="button" class="btn btn-info" id="searchWeather">
+              Search Weather
+            </button>
+            <button type="button" class="btn btn-danger" id="clearHistory">
+              Clear History
+            </button>
           </form>
         </div>
 
         <!--today's weather card-->
-        <div id="todayweather" class="card col-md-6">
+        <div id="infoCard" class="card col-md-6">
           <h2 id="cityname">Today's Weather:</h2>
           <span class="promts">Search to see the weather</span>
         </div>
